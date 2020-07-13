@@ -48,6 +48,7 @@ jobs:
       steps:
       - shell: bash
         run: |
+          ls
           ls dist
       - name: Upload math result for job 1
         uses: actions/upload-artifact@v1
