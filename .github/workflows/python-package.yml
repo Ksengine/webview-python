@@ -39,5 +39,5 @@ jobs:
     - name: Build
       run: |
         python setup.py sdist
-        python setup.py bdist_egg
-        python setup.py bdist_wheel
+        python -c "from setuptools import setup; execfile('setup.py')" bdist_egg
+        python -c "from setuptools import setup; execfile('setup.py')" bdist_wheel
