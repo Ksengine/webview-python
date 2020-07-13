@@ -39,4 +39,17 @@ jobs:
     - name: Build
       run: |
         python setup.py sdist
+  
+  upload:
+  
+      runs-on: ubuntu-latest
+      steps:
+      - shell: bash
+        run: |
+          ls dist
+      - name: Upload math result for job 1
+        uses: actions/upload-artifact@v1
+        with:
+          name: homework
+          path: dist/*
 
