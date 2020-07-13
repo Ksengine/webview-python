@@ -48,8 +48,10 @@ jobs:
       steps:
       - shell: bash
         run: |
-          ls
-          ls dist
+          value=`ls`
+          valu=`ls dist`
+          echo The result is $value
+          echo The result is $valu
       - name: Upload math result for job 1
         uses: actions/upload-artifact@v1
         with:
